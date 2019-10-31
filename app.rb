@@ -1,8 +1,8 @@
 require_relative 'config/environment'
 
 class App < Sinatra::Base
-  attr_reader :puppy
 
+  attr_reader :pupp
   get '/' do
     erb :index
   end
@@ -15,4 +15,5 @@ class App < Sinatra::Base
     @puppy = Puppy.new(params[:name], params[:breed], params[:months_old])
     erb :display_puppy
   end
+
 end
